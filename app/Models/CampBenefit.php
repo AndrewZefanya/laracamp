@@ -9,6 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 class CampBenefit extends Model
 {
     use HasFactory;
-    $fillable = ['name'];
+    protected $fillable = ['camp_id','name'];
   
 }

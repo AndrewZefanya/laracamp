@@ -35,7 +35,10 @@ Route::get('/', function () {
 
 //    User Dashboard
     Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
-    }
+    Route::get('dashbord/checkout/invoice/{checkout}', [CheckoutController::class, 'invoice'])->name('user.checkout.invoice'); 
+
+
+}
 
 );
 

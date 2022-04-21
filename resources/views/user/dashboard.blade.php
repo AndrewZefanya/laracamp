@@ -14,7 +14,9 @@
                     </h2>
                 </div>
             </div>
+            
             <div class="row my-5">
+            @include('components.alert')
                 <table class="table">
                     <tbody>
                     @forelse ($checkouts as $checkout)

@@ -31,6 +31,9 @@ Route::get('/', function () {
 
     Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
 
+// midtrans routes
+    Route::get('payment/success', [UserController::class, 'midtransCallback']);
+    Route::post('payment/success', [UserController::class, 'midtransCallback']);
 
 
     Route::middleware(['auth'])->group(function(){
@@ -48,9 +51,9 @@ Route::get('/', function () {
 
 //  Admin dashboard
     Route::prefix('admin/dashboard')->namespace('Admin')->name('admin.')->middleware('EnsureUserRole:admin')->group(function(){
-         Route::get('/', [AdminDashboard::class, 'index'])->name('dashboard');
+    Route::get('/', [AdminDashboard::class, 'index'])->name('dashboard');
 
-         //  Admin Checkout
+//  Admin Checkout
     Route::post('checkout/{checkout}', [AdminCheckout::class, 'update'])->name('checkout.update');
 
     });

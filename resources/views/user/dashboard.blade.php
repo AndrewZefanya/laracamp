@@ -32,7 +32,7 @@
                                 </td>
                                 <td>
                                     <strong>
-                                        Rp. {{$checkout->total}}
+                                           Rp. {{$checkout->total}}
                                         @if ($checkout->discount_id)
                                             <span class="badge bg-success">Disc {{$checkout->discount_percentage}}%</span>
                                         @endif

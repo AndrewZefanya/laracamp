@@ -21,7 +21,7 @@ class Camp extends Model
         if (!Auth::check()){
             return false;
         }
-        return Checkout::whereCampId($this->id)->whereUserId(Auth::id())->Exists();
+        return Checkout::whereCampId($this->id)->whereUserId(Auth::id())->exists();
 
     }
 }

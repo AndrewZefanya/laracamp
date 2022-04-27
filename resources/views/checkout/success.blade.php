@@ -9,10 +9,10 @@
                 </div>
                 <div class=" col-lg-12 col-12 header-wrap mt-4">
                     <p class="story">
-                        WHAT A DAY!
+                        Berhasil Checkout
                     </p>
                     <h2 class="primary-header ">
-                        Berhasil Checkout
+                        Silahkan menuju halaman Dashboard dan Lakukan Pembayaran
                     </h2>
                     <a href="{{route('dashboard')}}" class="btn btn-primary mt-3">
                         My Dashboard

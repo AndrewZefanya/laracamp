@@ -1,12 +1,11 @@
 @component('mail::message')
 # Register Camp: {{$checkout->Camp->title}}
 
-Hi {{$checkout->User->name}},
+Hi {{$checkout->user->name}}
 <br>
-Thankyou for the registration on <b>{{$checkout->Camp->title}}</b>, Please see the payment instruction by clicking the button below.
+Thank you for register on <b>{{$checkout->Camp->title}}</b>, pleas see payment instruction by click the button below.
 
-
-@component('mail::button', ['url' => route('dashboard)])
+@component('mail::button', ['url' => route('dashboard')])
 My Dashboard
 @endcomponent
 
